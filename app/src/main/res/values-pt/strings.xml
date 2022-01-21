@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ./common -->
+    <string name="app_name">CDP - Carteirinha Digital do seu Pet</string>
+    <string name="title_activity_auth">Autenticação</string>
+
+    <!-- ./menu -->
+    <string name="title_splash">Splash Screen</string>
+    <string name="title_login">Login</string>
+    <string name="title_register">Cadastre-se</string>
+
+    <!-- ./Splash Screen -->
+    <string name="splash_loading">Carregando ambiente…</string>
+
+    <!-- ./Register Screen -->
+    <string name="redirect_to_sign_in">Já possuí um cadastro? Faça o login!</string>
+
+    <!-- ./Login -->
+    <string name="redirect_to_sign_up">Novo por aqui? Faça o seu cadastro!</string>
+</resources>

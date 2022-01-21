@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import you.thiago.cdp.R
 import you.thiago.cdp.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {
@@ -30,8 +32,20 @@ class RegisterFragment : Fragment() {
         return root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupInterface()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun setupInterface() {
+        binding.btnSignIn.setOnClickListener {
+            binding.root.findNavController().navigate(R.id.nav_login)
+        }
     }
 }

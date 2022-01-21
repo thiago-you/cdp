@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_splash"
         android:name="you.thiago.cdp.ui.authentication.splash.SplashFragment"
-        android:label="@string/menu_splash"
+        android:label="@string/title_splash"
         tools:layout="@layout/fragment_splash">
 
         <action
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/nav_register"
         android:name="you.thiago.cdp.ui.authentication.register.RegisterFragment"
-        android:label="@string/menu_register"
+        android:label="@string/title_register"
         tools:layout="@layout/fragment_register" >
 
         <action
@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/nav_login"
         android:name="you.thiago.cdp.ui.authentication.login.LoginFragment"
-        android:label="@string/menu_login"
+        android:label="@string/title_login"
         tools:layout="@layout/fragment_login"/>
 
 </navigation>
