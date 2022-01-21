@@ -5,14 +5,17 @@
 
     <!-- ./menu -->
     <string name="title_splash">Splash Screen</string>
-    <string name="title_login">Sign up</string>
-    <string name="title_register">Sign in</string>
+    <string name="title_login">Sign in</string>
+    <string name="title_register">Sign up</string>
 
     <!-- ./Splash Screen -->
     <string name="splash_loading">Loading environment…</string>
 
     <!-- ./Register Screen -->
     <string name="redirect_to_sign_in">Already have an account? Sign in!</string>
+    <string name="hint_email" translatable="false">E-mail</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_password">Password</string>
 
     <!-- ./Login -->
     <string name="redirect_to_sign_up">No account? Sign up!</string>

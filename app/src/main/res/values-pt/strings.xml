@@ -14,6 +14,8 @@
 
     <!-- ./Register Screen -->
     <string name="redirect_to_sign_in">Já possuí um cadastro? Faça o login!</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_password">Senha</string>
 
     <!-- ./Login -->
     <string name="redirect_to_sign_up">Novo por aqui? Faça o seu cadastro!</string>
