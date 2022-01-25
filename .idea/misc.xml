@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_native_green_background.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/drawable/ic_sky_blue_background.xml" value="0.28854166666666664" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.28854166666666664" />
         <entry key="app/src/main/res/layout/activity_auth.xml" value="0.27239583333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27239583333333334" />
@@ -11,7 +13,7 @@
         <entry key="app/src/main/res/layout/content_auth.xml" value="0.27239583333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.27239583333333334" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.27239583333333334" />
-        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.27239583333333334" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.27239583333333334" />
         <entry key="app/src/main/res/layout/nav_header_auth.xml" value="0.27239583333333334" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.27239583333333334" />
