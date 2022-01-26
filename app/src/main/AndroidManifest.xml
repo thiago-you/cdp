@@ -21,7 +21,7 @@
             android:name=".ui.authentication.AuthActivity"
             android:exported="true"
             android:label="@string/title_activity_auth"
-            android:theme="@style/Theme.CDPCarteirinhaDigitalDoSeuPet.NoActionBar">
+            android:theme="@style/SplashTheme">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
