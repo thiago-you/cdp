@@ -16,7 +16,15 @@
     <string name="hint_email" translatable="false">E-mail</string>
     <string name="hint_name">Name</string>
     <string name="hint_password">Password</string>
+    <string name="sign_up_success">%s your sign up is complete!</string>
 
     <!-- ./Login -->
     <string name="redirect_to_sign_up">No account? Sign up!</string>
+
+    <!-- ./Auth Errors -->
+    <string name="invalid_email">Not a valid e-mail</string>
+    <string name="invalid_name">Name must be at least 5 characters long</string>
+    <string name="invalid_password">Password must be at least 5 characters long</string>
+    <string name="sign_in_failed">Sign In failed</string>
+    <string name="sign_up_failed">Sign Up failed</string>
 </resources>

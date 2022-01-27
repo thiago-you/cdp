@@ -16,7 +16,15 @@
     <string name="redirect_to_sign_in">Já possuí um cadastro? Faça o login!</string>
     <string name="hint_name">Nome</string>
     <string name="hint_password">Senha</string>
+    <string name="sign_up_success">%s você se cadastrou com sucesso!</string>
 
     <!-- ./Login -->
     <string name="redirect_to_sign_up">Novo por aqui? Faça o seu cadastro!</string>
+
+    <!-- ./Auth Errors -->
+    <string name="invalid_email">O e-mail é inválido</string>
+    <string name="invalid_name">O nome precisa ter ao menos 5 caracteres</string>
+    <string name="invalid_password">A senha precisa ter ao menos 5 caracteres</string>
+    <string name="sign_in_failed">Houve um problema com o login</string>
+    <string name="sign_up_failed">Houve um problema com o cadastro</string>
 </resources>
