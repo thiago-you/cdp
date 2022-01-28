@@ -5,9 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import you.thiago.cdp.R
 import java.lang.ref.WeakReference
@@ -22,8 +20,8 @@ class RegisterViewModel @Inject constructor(
 
     val signUpForm: StateFlow<SignUpForm> = MutableStateFlow(SignUpForm())
 
-    private val _signUpFormState = MutableStateFlow(SignUpFormState())
-    val signUpFormState: StateFlow<SignUpFormState> = _signUpFormState
+    private val _signUpFormState = MutableSharedFlow<SignUpFormState>()
+    val signUpFormState: SharedFlow<SignUpFormState> = _signUpFormState
 
     private val _signUpResult = MutableStateFlow(SignUpResult())
     val signUpResult: StateFlow<SignUpResult> = _signUpResult
@@ -63,12 +61,16 @@ class RegisterViewModel @Inject constructor(
     }
 
     private fun signUpDataChanged() {
-        if (!signUpForm.value.isEmailValid()) {
-            _signUpFormState.value = SignUpFormState(emailError = R.string.invalid_email)
-        } else if (!signUpForm.value.isNameValid()) {
-            _signUpFormState.value = SignUpFormState(nameError = R.string.invalid_name)
-        } else if (!signUpForm.value.isPasswordValid()) {
-            _signUpFormState.value = SignUpFormState(passwordError = R.string.invalid_password)
+        viewModelScope.launch {
+            if (!signUpForm.value.isEmailValid()) {
+                _signUpFormState.emit(SignUpFormState(emailError = R.string.invalid_email))
+            } else if (!signUpForm.value.isNameValid()) {
+                _signUpFormState.emit(SignUpFormState(nameError = R.string.invalid_name))
+            } else if (!signUpForm.value.isPasswordValid()) {
+                _signUpFormState.emit(SignUpFormState(passwordError = R.string.invalid_password))
+            } else {
+                _signUpFormState.emit(SignUpFormState(isDataValid = true))
+            }
         }
     }
 

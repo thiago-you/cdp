@@ -79,14 +79,16 @@ class RegisterFragment : Fragment() {
         collect(registerViewModel.signUpFormState) { formState ->
             binding.btnSignUp.isEnabled = formState.isDataValid
 
-            if (formState.emailError != null) {
-                binding.txtEmail.error = getString(formState.emailError)
-            }
-            if (formState.nameError != null) {
-                binding.txtName.error = getString(formState.nameError)
-            }
-            if (formState.passwordError != null) {
-                binding.txtPassword.error = getString(formState.passwordError)
+            when {
+                formState.emailError != null -> {
+                    binding.txtEmail.error = getString(formState.emailError)
+                }
+                formState.nameError != null -> {
+                    binding.txtName.error = getString(formState.nameError)
+                }
+                formState.passwordError != null -> {
+                    binding.txtPassword.error = getString(formState.passwordError)
+                }
             }
         }
     }
