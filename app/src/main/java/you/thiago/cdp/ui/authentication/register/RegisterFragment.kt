@@ -97,7 +97,10 @@ class RegisterFragment : Fragment() {
 
     private fun redirectLoggedUser() {
         Toast.makeText(requireContext(), R.string.sign_up_success, Toast.LENGTH_SHORT).show()
-        startActivity(Intent(requireActivity(), HomeActivity::class.java))
+
+        startActivity(Intent(requireActivity(), HomeActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        })
     }
 
     private fun showError(@StringRes errorRes: Int) {

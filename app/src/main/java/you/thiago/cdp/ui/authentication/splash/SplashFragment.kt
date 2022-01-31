@@ -1,5 +1,6 @@
 package you.thiago.cdp.ui.authentication.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.navigation.findNavController
 import you.thiago.cdp.R
 import you.thiago.cdp.databinding.FragmentSplashBinding
 import you.thiago.cdp.extensions.collect
+import you.thiago.cdp.ui.home.HomeActivity
 
 class SplashFragment : Fragment() {
 
@@ -44,9 +46,18 @@ class SplashFragment : Fragment() {
     }
 
     private fun setupListeners() {
-        collect(splashViewModel.loading) { loading ->
-            if (!loading) {
-                binding.root.findNavController().navigate(R.id.nav_register)
+        collect(splashViewModel.redirect) { redirect ->
+            redirect?.also {
+                when (redirect) {
+                    RedirectEnum.HOME -> {
+                        startActivity(Intent(requireActivity(), HomeActivity::class.java).apply {
+                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        })
+                    }
+                    RedirectEnum.REGISTER -> {
+                        binding.root.findNavController().navigate(R.id.nav_register)
+                    }
+                }
             }
         }
     }
