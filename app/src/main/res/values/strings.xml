@@ -2,6 +2,7 @@
     <!-- ./common -->
     <string name="app_name">CDP - Carteirinha Digital do seu Pet</string>
     <string name="title_activity_auth">Authentication</string>
+    <string name="title_activity_home">Home</string>
 
     <!-- ./menu -->
     <string name="title_splash">Splash Screen</string>
@@ -16,7 +17,7 @@
     <string name="hint_email" translatable="false">E-mail</string>
     <string name="hint_name">Name</string>
     <string name="hint_password">Password</string>
-    <string name="sign_up_success">%s your sign up is complete!</string>
+    <string name="sign_up_success">Sign up is complete!</string>
 
     <!-- ./Login -->
     <string name="redirect_to_sign_up">No account? Sign up!</string>

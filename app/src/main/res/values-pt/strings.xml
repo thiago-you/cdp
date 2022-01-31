@@ -3,6 +3,7 @@
     <!-- ./common -->
     <string name="app_name">CDP - Carteirinha Digital do seu Pet</string>
     <string name="title_activity_auth">Autenticação</string>
+    <string name="title_activity_home">Home</string>
 
     <!-- ./menu -->
     <string name="title_splash">Splash Screen</string>
@@ -16,7 +17,7 @@
     <string name="redirect_to_sign_in">Já possuí um cadastro? Faça o login!</string>
     <string name="hint_name">Nome</string>
     <string name="hint_password">Senha</string>
-    <string name="sign_up_success">%s você se cadastrou com sucesso!</string>
+    <string name="sign_up_success">Cadastro realizado com sucesso!</string>
 
     <!-- ./Login -->
     <string name="redirect_to_sign_up">Novo por aqui? Faça o seu cadastro!</string>

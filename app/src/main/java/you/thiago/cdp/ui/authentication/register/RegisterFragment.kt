@@ -1,5 +1,6 @@
 package you.thiago.cdp.ui.authentication.register
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import you.thiago.cdp.R
 import you.thiago.cdp.databinding.FragmentRegisterBinding
 import you.thiago.cdp.extensions.collect
+import you.thiago.cdp.ui.home.HomeActivity
 
 @AndroidEntryPoint
 class RegisterFragment : Fragment() {
@@ -70,7 +72,7 @@ class RegisterFragment : Fragment() {
     private fun setupListeners() {
         collect(registerViewModel.signUpResult) { result ->
             if (result.success != null) {
-                showLoggedUser(result.success)
+                redirectLoggedUser()
             } else if (result.error != null) {
                 showError(result.error)
             }
@@ -93,8 +95,9 @@ class RegisterFragment : Fragment() {
         }
     }
 
-    private fun showLoggedUser(username: String) {
-        Toast.makeText(requireContext(), getString(R.string.sign_up_success, username), Toast.LENGTH_SHORT).show()
+    private fun redirectLoggedUser() {
+        Toast.makeText(requireContext(), R.string.sign_up_success, Toast.LENGTH_SHORT).show()
+        startActivity(Intent(requireActivity(), HomeActivity::class.java))
     }
 
     private fun showError(@StringRes errorRes: Int) {
